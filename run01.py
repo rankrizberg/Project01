@@ -1,13 +1,23 @@
-import csv
+#!/usr/bin/env python3
+from csv import reader
 
-with open('employee_birthday.txt') as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    line_count = 0
-    for row in csv_reader:
-        if line_count == 0:
-            print(f'Column names are {", ".join(row)}')
-            line_count += 1
-        else:
-            print(f'\t{row[0]} works in the {row[1]} department, and was born in {row[2]}.')
-            line_count += 1
-    print(f'Processed {line_count} lines.')
+def read_csv_file(csv):
+    with open(csv, 'r') as read_obj:
+        data_dic={}
+        csv_reader = reader(read_obj)
+        for row in csv_reader:
+            new_key=row[2]
+            if new_key  not in data_dic.keys():
+                data_dic[new_key]=[]
+            data_dic[new_key].append(row)
+            
+        #for x in data_dic:
+            #print("key :{} value: {}".format(x,data_dic[x]))
+        for x in data_dic:
+            print("\nkey :{} ".format(x)) 
+            for row in data_dic[x]:
+                print(row)    
+            
+       # print(data_dic['Appserver'])
+   
+read_csv_file("/home/vagrant/Project01/ftpsrv1.csv")
