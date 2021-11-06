@@ -20,4 +20,4 @@ def read_csv_file(csv):
             
        # print(data_dic['Appserver'])
    
-read_csv_file("/home/vagrant/Project01/ftpsrv1.csv")
+read_csv_file("ftpsrv1.csv")
