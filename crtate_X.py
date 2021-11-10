@@ -4,7 +4,7 @@ def GenerateXML(Rank):
     root=xml.Element("DeploymentInfo")
     cl=xml.Element("Files")
     root.append(cl)
-    type1=xml.SubElement(cl,"SourceFile name")
+    type1=xml.SubElement(cl,"SourceFile_name")
     type1.text="Readme.txt"
 
     sourceServer1=xml.SubElement(cl,"sourceServer")
