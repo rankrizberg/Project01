@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from csv import reader
-import xml.etree.ElementTree
+import xml.etree.ElementTree as xml
 
 def read_csv_file(csv):
     with open(csv, 'r') as read_obj:
