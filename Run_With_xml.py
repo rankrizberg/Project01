@@ -16,13 +16,13 @@ def arg_parser():
 
 def read_csv_file(csv):
     with open(csv, 'r') as read_obj:
-        # pass the file object to reader() to get the reader object
+        
         csv_reader = reader(read_obj)
-        # Iterate over each row in the csv using reader object
+        
         for row in csv_reader:
-            # row variable is a list that represents a row in csv
+        
             new_kwy='_'.join(row).lower()
-            # remove duplicate line
+        
             if new_kwy  not in data_dic.keys():
                 data_dic[new_kwy]=row
 
