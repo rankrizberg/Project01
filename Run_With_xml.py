@@ -61,6 +61,7 @@ def buildtarget():
         if data_dic[x][2]=='DBserver':
             tempdic[index]=["DBserver","c:\DBserver\C"]
             index+=1
+    print(data_dic)
     return tempdic
 
 
